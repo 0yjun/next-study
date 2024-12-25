@@ -1,7 +1,6 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import style from "./[id].module.css";
 import fetchOneBook from "@/lib/fetch-one-book";
-import Head from "next/head";
 
 export const getServerSideProps = async (
   context: GetServerSidePropsContext
@@ -17,17 +16,7 @@ export default function Page({
   book,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   if (!book) {
-    return (
-      <>
-        <Head>
-          <title>한입북스</title>
-          <meta property="og:image" content="/thumbnail.png" />
-          <meta property="og:title" content="한입북스" />
-          <meta property="og:description" content="한입북스 설명" />
-        </Head>
-        <div>로딩중입니다.</div>
-      </>
-    );
+    return "문제가 발생했습니다. 나중에 다시 시도해주세요";
   }
   const { title, subTitle, description, author, publisher, coverImgUrl } = book;
 
