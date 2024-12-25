@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import SearchableLayout from "@/pages/components/searchable-layout";
-import BookItem from "../components/book-item";
+import BookItem from "@/pages/components/book-item";
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import fetchBooks from "@/lib/fetch-books";
 
