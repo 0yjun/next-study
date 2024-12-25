@@ -1,8 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import GlobalLayout from "@/pages/components/golbal-layout";
 import { NextPage } from "next";
 
