@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import style from "@/app/(afterLogin)/layout.module.css";
 import Link from "next/link";
@@ -7,11 +9,13 @@ import NavMenu from "@/app/(afterLogin)/_component/NavMenu";
 import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
 import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
 import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
+import { useSelectedLayoutSegment } from "next/navigation";
 //import RightSearchZone from "@/app/(afterLogin)/_component/RightSearchZone";
 
 type Props = { children: ReactNode; modal: ReactNode };
 export default function AfterLoginLayout({ children, modal }: Props) {
-  console.log(typeof modal);
+  //const modalSegment = useSelectedLayoutSegment("modal");
+  //console.log(modalSegment);
   return (
     <div className={style.container}>
       {modal}
