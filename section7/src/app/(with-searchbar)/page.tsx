@@ -3,8 +3,7 @@ import style from "./page.module.css";
 import { BookData } from "@/types";
 import { delay } from "@/util/delay";
 import { Suspense } from "react";
-import BookItemSkeleton from "@/skeleton/book-item-skeleton";
-import BookListSkeleton from "@/skeleton/book-list-skeleton";
+import BookListSkeleton from "@/components/skeleton/book-list-skeleton";
 
 async function RecomandBooks(): Promise<React.ReactElement> {
   await delay(1500);
